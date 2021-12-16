@@ -1,0 +1,27 @@
+html {
+    font-size: 1em
+}
+
+div#main {
+    max-width: 500px;
+    margin: 10px auto;
+    border: 1px solid silver;
+    padding: 10px;
+    min-height: 600px;
+}
+
+div.Mesg {
+    height: 20px !important;
+}
+
+ul#menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+ul#menu>li {
+    display: block;
+}

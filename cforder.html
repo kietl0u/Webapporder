@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering System</title>
+    <link href="cforder.css" rel="stylesheet"> 
+    <script src="cforder.js"></script>  
+</head>
+
+<body>
+    <div id='main'>
+        <div class="nav">
+            <button onclick="loadJson()">Load Json</button>
+        <h3 style="text-align:center"> Coffee Ordering System</h3>
+        </div>   
+        
+        <h1 style="text-align:center" >Jame's Coffee Shop</h1>
+        
+        <form id="coffee-type">
+            <p>Choose your type</p>
+            <input type="radio" onclick="coffeechoosesize();coffeechoosecoffee();drinkdisplay();"  id="espresso" name="drinks" value="espresso">
+            <label for="espresso" >Espresso</label>
+            <input type="radio" onclick="coffeechoosesize();coffeechoosecoffee();drinkdisplay();"  id="cappuccino" name="drinks" value="cappuccino">
+            <label for="cappuccino">Cappuccino</label>
+            <input type="radio" onclick="coffeechoosesize();coffeechoosecoffee();drinkdisplay();"  id="americano" name="drinks" value="americano">
+            <label for="americano">Americano</label>
+            <input type="radio" onclick="coffeechoosesize();coffeechoosecoffee();drinkdisplay();"  id="pour-over" name="drinks" value="pour-over">
+            <label for="pour-over">Pour over</label>
+            <input type="radio" onclick="coffeechoosesize();coffeechoosecoffee();drinkdisplay();"  id="chemex" name="drinks" value="chemex">
+            <label for="chemex">Chemex</label>
+        </form>
+        
+        
+        
+        <form id="all-coffee" >
+            <p>Choose your coffee</p>
+            <select id="coffee" onchange="coffeedisplay(this);" required>
+                <option id=""  disabled selected>Choose coffee</option>
+                <option value="house espresso" id="house-espresso" selected="selected">House espresso</option>
+                <option value="guest espresso" id="guest-espresso">Guest espresso</option>
+                <option value="single origin" id="single-origin">Single origin</option>
+                <option value="house blend" id="house-blend" selected="selected">House blend</option>
+            </select>
+        </form>
+        
+        <form id="all-size">
+            <p>Choose your size</p>
+            <select id="size" onchange="sizedisplay(this)"  required>
+                <option id="" disabled selected>Choose size</option>
+                <option value="Small" id="small">Small</option>
+                <option value="Medium" id="medium">Medium</option>
+                <option value="Large" id="large">Large</option>
+                <option value="Single" id="single">Single</option>
+                <option value="Double" id="double">Double</option>
+            </select>
+        </form>    
+        
+        <form id="all-extra">
+            <p>Choose your extra ( optional )</p>
+            <select id="extra" onchange="extradisplay(this);" required>
+                <option value="0" disabled selected >Extras</option>
+                <option value="cold milk">Cold milk</option>
+                <option value="hot milk">Hot milk</option>
+                <option value="chocolate dusting">Chocolate dusting</option>
+                <option value="marshmallows">Marshmallows</option>
+                <option value="whipped cream">Whipped cream</option>
+            </select>
+        </form>
+        
+        
+        <ul id="parent">
+            <li id="display"></li>
+            <li id="display1"></li>
+            <li id="display2"></li>
+            <li id="display3"></li>
+            <li id="price"></li>
+        </ul>
+        <button onclick="price();">Get price</button>
+        <button id="btn">Save favourite</button>
+        <button id="btn">Order favourite</button>
+        
+    
+    
+    <div>
+        <input placeholder="Enter customer's name" />
+        <input  placeholder="Enter number of cups" />
+        <button onclick="Purchase()">Add to order</button> 
+    </div>
+    <div class="fav">
+        <table>
+            <thead>
+                <th scope="col">Number</th>
+                <th scope="col">Drink Name</th>
+                <th scope="col">Size</th>
+            </thead>
+    </div>
+
+</body>
+</html>
+
